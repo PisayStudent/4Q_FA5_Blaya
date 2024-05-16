@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="problemOne()">Click here to go to problem 1</button>
+    <button onclick="problemTwo()">Click here to go to problem 2</button>
+    <br><br>
+
+    <p id="output"></p>
+    <form>
+        <input type="text" id="cnt">
+        <button onclick="addContact()">Add</button>
+        <button onclick="removeContact()">Remove</button>
+    </form>
+    <script>
+        var contacts = new Array(7);
+        contacts = [];
+
+        function addContact(){
+            var x = document.getElementById("cnt").value;
+            contacts.push(x);
+            document.getElementById("output").innerHTML = contacts;
+        }
+
+        function removeContact(){
+            var x = document.getElementById("cnt").value;
+            contacts.pop(x);
+            document.getElementById("output").innerHTML = contacts;
+        }
+
+        function problemOne(){
+            var p1 = window.open("4Q_FA5_1_Blaya.html");
+        }
+
+        function problemTwo(){
+            var p2 = window.open("4Q_FA5_2_Blaya.html");
+        }
+    </script>
+</body>
+</html>

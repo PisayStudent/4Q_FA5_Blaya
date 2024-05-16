@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="problemOne()">Click here to go to problem 1</button>
+    <button onclick="problemTwo()">Click here to go to problem 2</button>
+    <br><br>
+    <script>
+        var w, x;
+        
+        do{
+            x = prompt("Input a number: ");
+           if(x != Number(x)){
+            alert("Error. Please input a number.");
+           }
+        }while(x != Number(x))
+
+        x = Number(x);
+        w = x % 2;
+        var y, z;
+
+        if(w == 0){
+            for(y = x; y > 0; y--){
+                document.write(y + " ");
+                for(z = 1; z < x; z++){
+                    document.write(y + " ");
+                }
+                document.write("<br />");
+            }
+        }
+        else{
+            for(y = x; y > 0; y--){
+                document.write(y + " ");
+                for(z = 1; z < y; z++){
+                    document.write(y + " ");
+                }
+                document.write("<br />");
+            }
+        }
+
+        function problemOne(){
+            var p1 = window.open("4Q_FA5_1_Blaya.html");
+        }
+
+        function problemTwo(){
+            var p2 = window.open("4Q_FA5_2_Blaya.html");
+        }
+    </script>
+</body>
+</html>

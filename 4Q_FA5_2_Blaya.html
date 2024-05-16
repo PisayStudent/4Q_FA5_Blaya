@@ -17,22 +17,31 @@
         <button onclick="removeContact()">Remove</button>
     </form>
     <script>
-        var contacts = new Array(7);
-        contacts = [];
+        var contacts = [];
+        var y;
 
         function addContact(){
             var x = document.getElementById("cnt").value;
             contacts.push(x);
-            document.getElementById("output").innerHTML = contacts;
+            check();
+            display();
         }
 
         function removeContact(){
             var x = document.getElementById("cnt").value;
-            contacts.pop(x);
+            contacts.pop();
+            display();
+        }
+
+        function display(){
             document.getElementById("output").innerHTML = contacts;
         }
 
-        document.getElementById("output").innerHTML = contacts;
+        function check(){
+            if(contacts.length > 7){
+                contacts.shift();
+            }
+        }
 
         function problemOne(){
             var p1 = window.open("4Q_FA5_1_Blaya.html");
